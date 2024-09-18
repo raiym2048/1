@@ -14,7 +14,7 @@ FROM openjdk:17
 WORKDIR /app
 
 # Copy only the built jar file from the build stage
-COPY --from=build /app/target/your-application.jar /app/
+COPY --from=build /app/target/1-0.0.1-SNAPSHOT.jar /app/
 
 # Command to run the application
-CMD ["java", "-jar", "your-application.jar"]
+CMD ["java", "-jar", "1-0.0.1-SNAPSHOT.jar"]

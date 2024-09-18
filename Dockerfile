@@ -16,5 +16,8 @@ WORKDIR /app
 # Copy only the built jar file from the build stage
 COPY --from=build /app/target/1-0.0.1-SNAPSHOT.jar /app/
 
+# Expose port 8888 for the application
+EXPOSE 8888
+
 # Command to run the application
 CMD ["java", "-jar", "1-0.0.1-SNAPSHOT.jar"]
